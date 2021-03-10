@@ -32,7 +32,6 @@
 			<header class="header clear" role="banner">
 			<div class="mobile-nav"><i class="fas fa-bars"></i></div>
 			<div class="lang-switch"><a href="<?php echo home_url(); ?>/story-ar">ع</a></div>
-			<a class="insta" href="https://www.instagram.com/samacateringco/" target="_blank"><i class="fab fa-instagram"></i></a>
 
 
 					<div class="header-nav">

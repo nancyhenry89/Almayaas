@@ -106,6 +106,58 @@ wp_reset_postdata();
 		</div>
 	</div>
 </div>
+<div id="gallery" class="container-fluid">
+	<div id="food-gallery" class="gal">
+		<h3 class="gal-title">Food</h3>
+		<div class="gal-cont"><?php if( function_exists('photo_gallery') ) { photo_gallery(1); } ?></div>
+	</div>
+	<div id="interior" class="gal">
+		<h3 class="gal-title">Interior</h3>
+		<div class="gal-cont"><?php if( function_exists('photo_gallery') ) { photo_gallery(1); } ?></div>
+	</div>
+	<div id="exterior" class="gal">
+	<h3 class="gal-title">Exterior</h3>
+	<div class="gal-cont"><?php if( function_exists('photo_gallery') ) { photo_gallery(1); } ?></div>
+	</div>
+
+</div>
+<div id="delivery" class="container-fluid">
+<div class="container" >
+		<div class="row">
+			<div class="col-md-12">
+				<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/img/delivery.png"></div>
+				<a class="delivery-btn" href="#">Click here for delivery</a>
+			</div>
+		</div>
+</div>
+</div>
+
+<div id="contact" class="container-fluid">
+<div class="container" >
+		<div class="row">
+		<div class="col-md-12 center">
+				<h2>Contact us</h2>
+			</div>
+			<div class="col-md-12 phone">
+				<label>Phone Number</label>
+				<div class="number">022243432432</div>
+				<div class="number">022243432432</div>
+			</div>
+			<div class="col-md-12 address">
+				<label>Address</label>
+				<div>cdskjvndvnd's</div>
+				<div>cdskjvndvnd</div>
+			</div>
+			<div class="col-md-12 social">
+				<a class="web"><i class="fa fa-globe"></i></a>
+				<a class="insta"><i class="fab fa-instagram"></i></a>
+			</div>
+			<div class="col-md-12 map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.0054147005226!2d47.93899681509871!3d29.340837082143736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf854a7782564b%3A0x145d6a0bdb21fb30!2zRGlldCBDZW50ZXIgfCDYr9in2YrYqiDYs9mG2KrYsQ!5e0!3m2!1sen!2seg!4v1609680259521!5m2!1sen!2seg" width="80%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                           
+                                     </div>
+		</div>
+</div>
+</div>
 
 			<?php
 $loop = new WP_Query( array( 'post_type' => 'story') );
