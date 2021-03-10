@@ -43,12 +43,12 @@
 							</div>
 					<!-- /logo -->
 					<ul>				
-							<li><a href="<?php echo home_url(); ?>">Our Story</a></li>
-							<li><a href="<?php echo home_url(); ?>">About Us</a></li>
-							<li><a href="<?php echo home_url(); ?>/brands">Services</a></li>
-							<li><a href="<?php echo home_url(); ?>/contact">Photo Gallery</a></li>
-							<li><a href="<?php echo home_url(); ?>/contact">Delivery</a></li>
-							<li><a href="<?php echo home_url(); ?>/contact">Contact Us</a></li>
+							<li><a href="#story">Our Story</a></li>
+							<li><a href="#about">About Us</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#gallery">Photo Gallery</a></li>
+							<li><a href="#delivery">Delivery</a></li>
+							<li><a href="#contact">Contact Us</a></li>
 							
 					</div>
 					<!-- nav -->

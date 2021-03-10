@@ -107,6 +107,7 @@ wp_reset_postdata();
 	</div>
 </div>
 <div id="gallery" class="container-fluid">
+
 	<div id="food-gallery" class="gal">
 		<h3 class="gal-title">Food</h3>
 		<div class="gal-cont"><?php if( function_exists('photo_gallery') ) { photo_gallery(1); } ?></div>

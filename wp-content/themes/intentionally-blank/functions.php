@@ -293,7 +293,7 @@ function enable_threaded_comments()
 //main section
 add_action('init', 'main_register');
 
-function main_register() {
+/*function main_register() {
 
 	$labels = array(
 		'name' => _x('Main', 'post type general name'),
