@@ -38,6 +38,10 @@ wp_reset_postdata();
 ?>
 
 			</div>
+			<?php
+$loop = new WP_Query( array( 'post_type' => 'story') );
+if ( $loop->have_posts() ) :
+while ( $loop->have_posts() ) : $loop->the_post(); ?>
 <div class="container" id="story">
 	<div class="row">
 		<div class="col-md-12 center">
@@ -47,13 +51,13 @@ wp_reset_postdata();
 	<div class="row">
 		<div class="col-md-12">
 			<p class="story-text">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.
-			Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+			<?php echo get_post_meta( get_the_ID(), 'story_text_box', true ); ?>
 			</p>
 		</div>
 	</div>
 </div>
-<div class="container-fluid" id="about">
+
+<div class="container-fluid" id="about" style="background-image: url('<?php echo get_post_meta( get_the_ID(), 'aboutImg', true ); ?>');">
 	<div class="container" >
 		<div class="row">
 			<div class="col-md-12 center">
@@ -63,14 +67,22 @@ wp_reset_postdata();
 		<div class="row">
 			<div class="col-md-12">
 				<p class="about-text">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.
-				Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+				<?php echo get_post_meta( get_the_ID(), 'about_text_box', true ); ?>
 				</p>
 			</div>
 		</div>
 	</div>
 </div>
 
+<?php endwhile;
+
+endif;
+wp_reset_postdata();
+?>
+			<?php
+$loop = new WP_Query( array( 'post_type' => 'home') );
+if ( $loop->have_posts() ) :
+while ( $loop->have_posts() ) : $loop->the_post(); ?>
 <div class="container-fluid" id="services">
 	<div class="container" >
 		<div class="row">
@@ -81,31 +93,37 @@ wp_reset_postdata();
 		<div class="row">
 			<div class="col-md-3">
 				<div class="s-icon">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/s1.png">
+				<img src="<?php echo get_post_meta( get_the_ID(), 'brand1img', true ); ?>">
 				</div>
-				<label class="service-label">Dine in </label>
+				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand1', true ); ?> </label>
 			</div>
 			<div class="col-md-3">
 				<div class="s-icon">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/s2.png">
+				<img src="<?php echo get_post_meta( get_the_ID(), 'brand2img', true ); ?>">
 				</div>
-				<label class="service-label">Delivery</label>
+				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand2', true ); ?> </label>
 			</div>
 			<div class="col-md-3">
 				<div class="s-icon">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/s3.png">
+				<img src="<?php echo get_post_meta( get_the_ID(), 'brand3img', true ); ?>">
 				</div>
-				<label class="service-label">Catering</label>
+				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand3', true ); ?> </label>
 			</div>
 			<div class="col-md-3">
 				<div class="s-icon">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/s4.png">
+				<img src="<?php echo get_post_meta( get_the_ID(), 'brand4img', true ); ?>">
 				</div>
-				<label class="service-label">Events</label>
+				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand4', true ); ?> </label>
 			</div>
 		</div>
 	</div>
 </div>
+
+<?php endwhile;
+
+endif;
+wp_reset_postdata();
+?>
 <div id="gallery" class="container-fluid">
 
 	<div id="food-gallery" class="gal">
@@ -114,11 +132,11 @@ wp_reset_postdata();
 	</div>
 	<div id="interior" class="gal">
 		<h3 class="gal-title">Interior</h3>
-		<div class="gal-cont"><?php if( function_exists('photo_gallery') ) { photo_gallery(1); } ?></div>
+		<div class="gal-cont"><?php if( function_exists('photo_gallery') ) { photo_gallery(2); } ?></div>
 	</div>
 	<div id="exterior" class="gal">
 	<h3 class="gal-title">Exterior</h3>
-	<div class="gal-cont"><?php if( function_exists('photo_gallery') ) { photo_gallery(1); } ?></div>
+	<div class="gal-cont"><?php if( function_exists('photo_gallery') ) { photo_gallery(3); } ?></div>
 	</div>
 
 </div>
@@ -132,7 +150,10 @@ wp_reset_postdata();
 		</div>
 </div>
 </div>
-
+<?php
+$loop = new WP_Query( array( 'post_type' => 'contact') );
+if ( $loop->have_posts() ) :
+while ( $loop->have_posts() ) : $loop->the_post(); ?>
 <div id="contact" class="container-fluid">
 <div class="container" >
 		<div class="row">
@@ -142,12 +163,10 @@ wp_reset_postdata();
 			<div class="col-md-12 phone">
 				<label>Phone Number</label>
 				<div class="number">022243432432</div>
-				<div class="number">022243432432</div>
 			</div>
 			<div class="col-md-12 address">
 				<label>Address</label>
 				<div>cdskjvndvnd's</div>
-				<div>cdskjvndvnd</div>
 			</div>
 			<div class="col-md-12 social">
 				<a class="web"><i class="fa fa-globe"></i></a>
@@ -159,7 +178,11 @@ wp_reset_postdata();
 		</div>
 </div>
 </div>
+<?php endwhile;
 
+endif;
+wp_reset_postdata();
+?>
 			<?php
 $loop = new WP_Query( array( 'post_type' => 'story') );
 if ( $loop->have_posts() ) :
@@ -180,193 +203,6 @@ endif;
 wp_reset_postdata();
 ?>
 
-			<?php
-$loop = new WP_Query( array( 'post_type' => 'home') );
-if ( $loop->have_posts() ) :
-while ( $loop->have_posts() ) : $loop->the_post(); ?>
-			<div class="container exp">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="title">+20 years of experience</div>
-				</div>
-			</div>
-			<div class="row exp-details">
-				<div class="col-md-6">
-					<div class="one-exp">
-						<div class="img">
-						<img src="<?php echo get_post_meta( get_the_ID(), 'exp1img', true ); ?>">
-							</img>
-						</div>
-						<div>
-							<div class="exp-title"><?php echo get_post_meta( get_the_ID(), 'exp1', true ); ?></div>
-							<div class="desc-text">
-							<?php echo get_post_meta( get_the_ID(), 'exp1dec', true ); ?>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="one-exp">
-						<div class="img">
-						<img src="<?php echo get_post_meta( get_the_ID(), 'exp2img', true ); ?>">
-							</img>
-						</div>
-						<div>
-							<div class="exp-title"><?php echo get_post_meta( get_the_ID(), 'exp2', true ); ?></div>
-							<div class="desc-text">
-							<?php echo get_post_meta( get_the_ID(), 'exp2dec', true ); ?>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="one-exp">
-						<div class="img">
-						<img src="<?php echo get_post_meta( get_the_ID(), 'exp3img', true ); ?>">
-							</img>
-						</div>
-						<div>
-							<div class="exp-title"><?php echo get_post_meta( get_the_ID(), 'exp3', true ); ?></div>
-							<div class="desc-text">
-							<?php echo get_post_meta( get_the_ID(), 'exp3dec', true ); ?>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="one-exp">
-						<div class="img">
-						<img src="<?php echo get_post_meta( get_the_ID(), 'exp4img', true ); ?>">
-							</img>
-						</div>
-						<div>
-							<div class="exp-title"><?php echo get_post_meta( get_the_ID(), 'exp4', true ); ?></div>
-							<div class="desc-text">
-							<?php echo get_post_meta( get_the_ID(), 'exp4dec', true ); ?>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="one-exp">
-						<div class="img">
-						<img src="<?php echo get_post_meta( get_the_ID(), 'exp5img', true ); ?>">
-							</img>
-						</div>
-						<div>
-							<div class="exp-title"><?php echo get_post_meta( get_the_ID(), 'exp5', true ); ?></div>
-							<div class="desc-text">
-							<?php echo get_post_meta( get_the_ID(), 'exp5dec', true ); ?>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="one-exp">
-						<div class="img">
-						<img src="<?php echo get_post_meta( get_the_ID(), 'exp6img', true ); ?>">
-							</img>
-						</div>
-						<div>
-							<div class="exp-title"><?php echo get_post_meta( get_the_ID(), 'exp6', true ); ?></div>
-							<div class="desc-text">
-							<?php echo get_post_meta( get_the_ID(), 'exp6dec', true ); ?>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row exp-foot">
-				and more...
-			</div>
-			</div>
 
-			<!--bluebox end-->
-
-
-		</div>
-		<div class="exp-brands container-fluid">
-		<div class="container exp">
-
-<div class="row exp-details">
-	<div class="col-md-6">
-		<div class="one-exp">
-			<div class="img">
-			<img src="<?php echo get_post_meta( get_the_ID(), 'brand1img', true ); ?>"></img>
-			</div>
-			<div>
-				<div class="desc-text">
-				<?php echo get_post_meta( get_the_ID(), 'brand1', true ); ?>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="one-exp">
-			<div class="img">
-			<img src="<?php echo get_post_meta( get_the_ID(), 'brand2img', true ); ?>"></img>
-			</div>
-			<div>
-				<div class="desc-text">
-				<?php echo get_post_meta( get_the_ID(), 'brand2', true ); ?>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="one-exp">
-			<div class="img">
-			<img src="<?php echo get_post_meta( get_the_ID(), 'brand3img', true ); ?>"></img>
-			</div>
-			<div>
-				<div class="desc-text">
-				<?php echo get_post_meta( get_the_ID(), 'brand3', true ); ?>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="one-exp">
-			<div class="img">
-			<img src="<?php echo get_post_meta( get_the_ID(), 'brand4img', true ); ?>"></img>
-			</div>
-			<div>
-				<div class="desc-text">
-				<?php echo get_post_meta( get_the_ID(), 'brand4', true ); ?>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="one-exp">
-			<div class="img">
-				<img src="<?php echo get_post_meta( get_the_ID(), 'brand5img', true ); ?>"></img>
-			</div>
-			<div>
-				<div class="desc-text">
-				<?php echo get_post_meta( get_the_ID(), 'brand5', true ); ?>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="one-exp special">
-			<p class="exp-title">and new concepts to be LAUNCHED soon</p>
-		</div>
-	</div>
-</div>
-</div>
-		</div>
-		<!-- #content -->
-	</div>
-	<!-- #primary -->
-</div>
-<!-- #main-content -->
-
-<?php endwhile;
-
-endif;
-wp_reset_postdata();
-?>
 <?php
 get_footer();

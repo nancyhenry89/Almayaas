@@ -293,7 +293,7 @@ function enable_threaded_comments()
 //main section
 add_action('init', 'main_register');
 
-/*function main_register() {
+function main_register() {
 
 	$labels = array(
 		'name' => _x('Main', 'post type general name'),
@@ -424,133 +424,6 @@ function credits_meta() {
 
 <?php//about start?>
 
-<p><label>About image 1</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "about1" id = "podcast_file" size = "70" value = "<?php echo $about1; ?>" />
-<input id = "aupload_image_button" type = "button" value = "Upload">
-</td> </tr> </table> 
-<p><label>About image 2</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "about2" id = "podcast_file" size = "70" value = "<?php echo $about2; ?>" />
-<input id = "aupload_image_button2" type = "button" value = "Upload">
-</td> </tr> </table> 
-<p><label>About image 3</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "about3" id = "podcast_file" size = "70" value = "<?php echo $about3; ?>" />
-<input id = "aupload_image_button3" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-
-
-
-<p><label>About image 1 Arabic</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "about1ar" id = "podcast_file" size = "70" value = "<?php echo $about1ar; ?>" />
-<input id = "aupload_image_button_ar" type = "button" value = "Upload">
-</td> </tr> </table> 
-<p><label>About image 2 Arabic</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "about2ar" id = "podcast_file" size = "70" value = "<?php echo $about2ar; ?>" />
-<input id = "aupload_image_button2_ar" type = "button" value = "Upload">
-</td> </tr> </table> 
-<p><label>About image 3 Arabic</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "about3ar" id = "podcast_file" size = "70" value = "<?php echo $about3ar; ?>" />
-<input id = "aupload_image_button3_ar" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-<?php//about end?>
-
-
-
-
-
-
-<p><label>Services Banner</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "servicesBanner" id = "podcast_file" size = "70" value = "<?php echo $servicesBanner; ?>" />
-<input id = "upload_image_button4" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-
-
-<p><label>Brands Banner</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "brandsBanner" id = "podcast_file" size = "70" value = "<?php echo $brandsBanner; ?>" />
-<input id = "upload_image_button5" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-
-
-<p><label>Careers Banner</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "careersBanner" id = "podcast_file" size = "70" value = "<?php echo $careersBanner; ?>" />
-<input id = "upload_image_button6" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-
-
-
-
-
-<p><label>Services Banner Arabic</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "servicesBannerar" id = "podcast_file" size = "70" value = "<?php echo $servicesBannerar; ?>" />
-<input id = "upload_image_button4ar" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-
-
-<p><label>Brands Banner Arabic</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "brandsBannerar" id = "podcast_file" size = "70" value = "<?php echo $brandsBannerar; ?>" />
-<input id = "upload_image_button5ar" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-
-
-<p><label>Careers Banner Arabic</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "careersBannerar" id = "podcast_file" size = "70" value = "<?php echo $careersBannerar; ?>" />
-<input id = "upload_image_button6ar" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-
-
-
-
-<p><label>Company Profile</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "profile" id = "podcast_file" size = "70" value = "<?php echo $profile; ?>" />
-<input id = "upload_image_button7" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
 
   <script type = "text/javascript">
 
@@ -646,236 +519,6 @@ function main_custom_columns($column){
 
 
 
-//brands section
-add_action('init', 'brands_register');
-
-//Add Metabox
-
-//this is to enable media upload
-add_action('add_meta_boxes', 'add_upload_file_metaboxes');
-function my_admin_load_styles_and_scripts() {
-    wp_enqueue_media();
-}
-add_action( 'admin_enqueue_scripts', 'my_admin_load_styles_and_scripts' );
-////////
-
-
-function brands_register() {
-
-	$labels = array(
-		'name' => _x('Brands', 'post type general name'),
-		'singular_name' => _x('brands Item', 'post type singular name'),
-		'add_new' => _x('Add New', 'main item'),
-		'add_new_item' => __('Add New main Item'),
-		'edit_item' => __('Edit main Item'),
-		'new_item' => __('New main Item'),
-		'view_item' => __('View main Item'),
-		'search_items' => __('Search main'),
-		'not_found' =>  __('Nothing found'),
-		'not_found_in_trash' => __('Nothing found in Trash'),
-		'parent_item_colon' => ''
-	);
-
-	$args = array(
-		'labels' => $labels,
-		'public' => true,
-		'publicly_queryable' => true,
-		'show_ui' => true,
-		'query_var' => true,
-		'menu_icon' => get_stylesheet_directory_uri() . '/article16.png',
-		'rewrite' => true,
-		'capability_type' => 'post',
-		'hierarchical' => false,
-		'menu_position' => null,
-		'supports' => array('title','editor')
-	  ); 
-
-	register_post_type( 'brands' , $args );
-}	
-add_action("admin_init", "admin_init_brands");
-
-function admin_init_brands(){
-  add_meta_box("credits_meta_brands", "brands", "credits_meta_brands", "brands", "normal", "low");
-}
-
-function add_upload_file_metaboxes() {
-    add_meta_box('swp_file_upload', 'File Upload', 'swp_file_upload', 'podcasts', 'normal', 'default');
-}
-
-
-function swp_file_upload() {
-  // global $post;
-    // Noncename needed to verify where the data originated
-    echo '<input type="hidden" name="podcastmeta_noncename" id="podcastmeta_noncename" value="'.
-    wp_create_nonce(plugin_basename(__FILE__)).
-    '" />';
-    global $wpdb;
-    $strFile = get_post_meta($post -> ID, $key = 'podcast_file', true);
-    $media_file = get_post_meta($post -> ID, $key = '_wp_attached_file', true);
-    if (!empty($media_file)) {
-        $strFile = $media_file;
-    } ?>
-
-          <?php
-    function admin_scripts() {
-        wp_enqueue_script('media-upload');
-        wp_enqueue_script('thickbox');
-    }
-
-    function admin_styles() {
-        wp_enqueue_style('thickbox');
-    }
-    add_action('admin_print_scripts', 'admin_scripts');
-    add_action('admin_print_styles', 'admin_styles');
-}
-
-
-
-
-function credits_meta_brands() {
-  global $post;
-  $custom = get_post_custom($post->ID);
-  $brandName = $custom["brandName"][0];
-  $brandText = $custom["brandText"][0];
-  $brandTextar = $custom["brandTextar"][0];
-
-  $web = $custom["web"][0];
-  $instaLink = $custom["instaLink"][0];
-  $brandOrder=$custom["brandOrder"][0];
-
-  $logo = $custom["logo"][0];
-  $logoc = $custom["logoc"][0];
-  $background = $custom["background"][0];
-
-?>
-<p><label>Brand Name</label><br />
-  <input type="text" name="brandName" value=<?php echo $brandName; ?>></p>
-  <p><label>Brand order</label><br />
-  <input type="text" name="brandOrder" value=<?php echo $brandOrder; ?>></p>
-  <p><label>brand Description</label><br />
-  <textarea type="text" name="brandText"><?php echo $brandText; ?></textarea></p>
-  <p><label>brand Arabic Description</label><br />
-  <textarea type="text" name="brandTextar"><?php echo $brandTextar; ?></textarea></p>
-  <p><label>web</label><br />
-  <textarea name="web"><?php echo $web; ?></textarea></p>
-  <p><label>instaLink</label><br />
-  <textarea type="text" name="instaLink"><?php echo $instaLink; ?></textarea></p>
-  <div>
-
-<h3>Logo</h3>
-<table>
-<tr valign = "top">
-<td>
-<input type = "text"
-name = "logo"
-id = "podcast_file"
-size = "70"
-value = "<?php echo $logo; ?>" />
-<input id = "upload_image_button"
-type = "button"
-value = "Upload">
-</td> </tr> </table> <input type = "hidden"
-name = "img_txt_id"
-id = "img_txt_id"
-value = "" />
-</div> 
-
-<h3>Logo Colored</h3>
-<table>
-<tr valign = "top">
-<td>
-<input type = "text"
-name = "logoc"
-id = "podcast_file"
-size = "70"
-value = "<?php echo $logoc; ?>" />
-<input id = "upload_image_button3"
-type = "button"
-value = "Upload">
-</td> </tr> </table> <input type = "hidden"
-name = "img_txt_id"
-id = "img_txt_id"
-value = "" />
-</div> 
-
-<h3>Background</h3>
-
-<table>
-<tr valign = "top">
-<td>
-<input type = "text"
-name = "background"
-id = "podcast_file_mobile"
-size = "70"
-value = "<?php echo $background; ?>" />
-<input id = "upload_image_button2"
-type = "button"
-value = "Upload">
-</td> </tr> </table> <input type = "hidden"
-name = "img_txt_id"
-id = "img_txt_id"
-value = "" />
-</div>  
-<script type = "text/javascript">
-
-
-jQuery("#upload_image_button").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())})
-jQuery("#upload_image_button2").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
-jQuery("#upload_image_button3").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
- 
- </script>
-  <?php
-}
-
-
-add_action('save_post', 'save_details_brands','save_podcasts_meta');
-function save_details_brands(){
-  global $post;
-  update_post_meta($post->ID, "brandOrder", $_POST["brandOrder"]);
-
-    update_post_meta($post->ID, "brandName", $_POST["brandName"]);
-  update_post_meta($post->ID, "brandText", $_POST["brandText"]);
-  update_post_meta($post->ID, "brandTextar", $_POST["brandTextar"]);
-
-	update_post_meta($post->ID, "web", $_POST["web"]);
-    update_post_meta($post->ID, "instaLink", $_POST["instaLink"]);
-    update_post_meta($post->ID, "logo", $_POST["logo"]);
-    update_post_meta($post->ID, "logoc", $_POST["logoc"]);
-
-    update_post_meta($post->ID, "background", $_POST["background"]);
-
-    
-
-}
-
-
-    add_action("manage_posts_custom_column",  "brands_custom_columns");
-    add_filter("manage_edit-brands_columns", "brands_edit_columns");
-
-function brands_edit_columns($columns){
-  $columns = array(
-    "cb" => "<input  />",
-    "title" => "brandsTitle",
-    "description" => "Description",
-
-
-  );
-
-  return $columns;
-}
-function brands_custom_columns($column){
-  global $post;
-  switch ($column) {
-    case "description":
-    echo $custom["text"][0];
-      break;
-
-  }
-
-}
-
-
-
 
 
 
@@ -895,7 +538,7 @@ function init_remove_support(){
     remove_post_type_support( $post_type, 'editor');
 }
 	$labels = array(
-		'name' => _x('story', 'post type general name'),
+		'name' => _x('Story and About', 'post type general name'),
 		'singular_name' => _x('story Item', 'post type singular name'),
 		'add_new' => _x('Add New', 'main item'),
 		'add_new_item' => __('Add New main Item'),
@@ -936,21 +579,11 @@ function admin_init_story(){
 function credits_meta_story() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $blueBox = $custom["blueBox"][0];
-  $blueBoxAR = $custom["blueBoxAR"][0];
-  $coImg = $custom["coImg"][0];
-  $valImg = $custom["valImg"][0];
-  $teamImg = $custom["teamImg"][0];
-  $capImg = $custom["capImg"][0];
+  $aboutImg = $custom["aboutImg"][0];
+
 
   ?>
-  <p><label>Blue Box</label><br />
-<textarea rows="8" cols="50" type="text" name="blueBox"> <?php echo $blueBox; ?></textarea></p>
-<p><label>Blue Box Arabic</label><br />
-<textarea rows="8" cols="50" type="text" name="blueBoxAR"> <?php echo $blueBoxAR; ?></textarea></p>
-<h3>Co Founder Image</h3>
-<table><tr valign = "top"><td><input type = "text" name = "coImg" id = "podcast_file" size = "70"value = "<?php echo $coImg; ?>" />
-<input id = "upload_image_button"type = "button"value = "Upload"></td> </tr> </table> <input type = "hidden" name = "img_txt_id" id = "img_txt_id"value = "" />  
+
 <p><h1>Our Story</h1>
   <?php
   $content = get_post_meta($post->ID, 'story_text_box' , true ) ;
@@ -971,54 +604,16 @@ function credits_meta_story() {
   $content1ar = get_post_meta($post->ID, 'about_text_box_ar' , true ) ;
   wp_editor( htmlspecialchars_decode($content1ar), 'about_text_box_ar', array("media_buttons" => false) );
   ?>
-  <p><h1>Our Values</h1>
-  <?php
-  $content2 = get_post_meta($post->ID, 'values_text_box' , true ) ;
-  wp_editor( htmlspecialchars_decode($content2), 'values_text_box', array("media_buttons" => false) );
-  ?>
-    <p><h1>Our Values Arabic</h1>
-  <?php
-  $content2ar = get_post_meta($post->ID, 'values_text_box_ar' , true ) ;
-  wp_editor( htmlspecialchars_decode($content2ar), 'values_text_box_ar', array("media_buttons" => false) );
-  ?>
-  <p><h1>Capabilities</h1>
-  <?php
-  $content3 = get_post_meta($post->ID, 'cap_text_box' , true ) ;
-  wp_editor( htmlspecialchars_decode($content3), 'cap_text_box', array("media_buttons" => false) );
-  ?>
-    <p><h1>Capabilities Arabic</h1>
-  <?php
-  $content3ar = get_post_meta($post->ID, 'cap_text_box_ar' , true ) ;
-  wp_editor( htmlspecialchars_decode($content3ar), 'cap_text_box_ar', array("media_buttons" => false) );
-  ?>
-  <p><h1>Our Team</h1>
-  <?php
-  $content4 = get_post_meta($post->ID, 'team_text_box' , true ) ;
-  wp_editor( htmlspecialchars_decode($content4), 'team_text_box', array("media_buttons" => false) );
-?>
-  <p><h1>Our Team Arabic</h1>
-  <?php
-  $content4ar = get_post_meta($post->ID, 'team_text_box_ar' , true ) ;
-  wp_editor( htmlspecialchars_decode($content4ar), 'team_text_box_ar', array("media_buttons" => false) );
-?>
-<h3>Our Values Image</h3>
-<table><tr valign = "top"><td><input type = "text" name = "valImg" id = "podcast_file" size = "70"value = "<?php echo $valImg; ?>" />
+
+
+<h3>About Image</h3>
+<table><tr valign = "top"><td><input type = "text" name = "aboutImg" id = "podcast_file" size = "70"value = "<?php echo $aboutImg; ?>" />
 <input id = "upload_image_button1"type = "button"value = "Upload"></td> </tr> </table> <input type = "hidden" name = "img_txt_id" id = "img_txt_id"value = "" />  
 
-<h3>Our Team Image</h3>
-<table><tr valign = "top"><td><input type = "text" name = "teamImg" id = "podcast_file" size = "70"value = "<?php echo $teamImg; ?>" />
-<input id = "upload_image_button2"type = "button"value = "Upload"></td> </tr> </table> <input type = "hidden" name = "img_txt_id" id = "img_txt_id"value = "" />  
-
-<h3>Capabilities Image</h3>
-<table><tr valign = "top"><td><input type = "text" name = "capImg" id = "podcast_file" size = "70"value = "<?php echo $capImg; ?>" />
-<input id = "upload_image_button3"type = "button"value = "Upload"></td> </tr> </table> <input type = "hidden" name = "img_txt_id" id = "img_txt_id"value = "" />  
 
 <script type = "text/javascript">
 
-jQuery("#upload_image_button").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
 jQuery("#upload_image_button1").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
-jQuery("#upload_image_button2").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
-jQuery("#upload_image_button3").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
 
 
     </script>
@@ -1029,13 +624,8 @@ jQuery("#upload_image_button3").on("click",function(t){var e;t.preventDefault();
 add_action('save_post', 'save_details_story','save_podcasts_meta');
 function save_details_story(){
 	global $post;
-    update_post_meta($post->ID, "blueBox", $_POST["blueBox"]);
-    update_post_meta($post->ID, "blueBoxAR", $_POST["blueBoxAR"]);
+    update_post_meta($post->ID, "aboutImg", $_POST["aboutImg"]);
 
-    update_post_meta($post->ID, "coImg", $_POST["coImg"]);
-    update_post_meta($post->ID, "valImg", $_POST["valImg"]);
-    update_post_meta($post->ID, "teamImg", $_POST["teamImg"]);
-    update_post_meta($post->ID, "capImg", $_POST["capImg"]);
 
 	  update_post_meta($post->ID, "sectionLabel", $_POST["sectionLabel"]);
 	  update_post_meta($post->ID, "text", $_POST["text"]);
@@ -1056,15 +646,7 @@ function save_details_story(){
     update_post_meta($post->ID, 'values_text_box_ar', $valuesText );
 
     
-    $capText=htmlspecialchars($_POST['cap_text_box']);
-    update_post_meta($post->ID, 'cap_text_box', $capText );
-        
-    $capText=htmlspecialchars($_POST['cap_text_box_ar']);
-    update_post_meta($post->ID, 'cap_text_box_ar', $capText );
-    $teamText=htmlspecialchars($_POST['team_text_box']);
-    update_post_meta($post->ID, 'team_text_box', $teamText );
-    $teamText=htmlspecialchars($_POST['team_text_box_ar']);
-    update_post_meta($post->ID, 'team_text_box_ar', $teamText );
+
     
 
 }
@@ -1104,117 +686,6 @@ function story_custom_columns($column){
 
 
 
-//careers section
-add_action('init', 'careers_register');
-
-//Add Metabox
-
-
-function careers_register() {
-
-	$labels = array(
-		'name' => _x('Careers', 'post type general name'),
-		'singular_name' => _x('careers Item', 'post type singular name'),
-		'add_new' => _x('Add New', 'main item'),
-		'add_new_item' => __('Add New main Item'),
-		'edit_item' => __('Edit main Item'),
-		'new_item' => __('New main Item'),
-		'view_item' => __('View main Item'),
-		'search_items' => __('Search main'),
-		'not_found' =>  __('Nothing found'),
-		'not_found_in_trash' => __('Nothing found in Trash'),
-		'parent_item_colon' => ''
-	);
-
-	$args = array(
-		'labels' => $labels,
-		'public' => true,
-		'publicly_queryable' => true,
-		'show_ui' => true,
-		'query_var' => true,
-		'menu_icon' => get_stylesheet_directory_uri() . '/article16.png',
-		'rewrite' => true,
-		'capability_type' => 'post',
-		'hierarchical' => false,
-		'menu_position' => null,
-		'supports' => array('title')
-	  ); 
-
-	register_post_type( 'careers' , $args );
-}	
-add_action("admin_init", "admin_init_careers");
-
-function admin_init_careers(){
-  add_meta_box("credits_meta_careers", "careers", "credits_meta_careers", "careers", "normal", "low");
-}
-
-
-function credits_meta_careers() {
-  global $post;
-  $custom = get_post_custom($post->ID);
-  $title = $custom["title"][0];
-  $desc= $custom["desc"][0];
-  $titlear = $custom["titlear"][0];
-  $descar= $custom["descar"][0];
-
-?>
-<p><label>Job Title</label><br />
-  <input type="text" name="title" value=<?php echo $title; ?>></p>
-  <p><label>Job Description</label><br />
-  <textarea type="text" name="desc"><?php echo $desc; ?></textarea></p>
-  <p><label>Job Title Arabic</label><br />
-  <textarea name="titlear"><?php echo $titlear; ?></textarea></p>
-  <p><label>Job Description Arabic</label><br />
-  <textarea type="text" name="descar"><?php echo $descar; ?></textarea></p>
-
-
-  
-  <?php
-}
-
-
-  add_action('save_post', 'save_details_careers','save_podcasts_meta','wo_save_postdata');
-  function save_details_careers(){
-    global $post;
-      update_post_meta($post->ID, "title", $_POST["title"]);
-    update_post_meta($post->ID, "desc", $_POST["desc"]);
-    update_post_meta($post->ID, "titlear", $_POST["titlear"]);
-      update_post_meta($post->ID, "descar", $_POST["descar"]);
-
-  
-    }
-
-
-    add_action("manage_posts_custom_column",  "careers_custom_columns");
-    add_filter("manage_edit-careers_columns", "careers_edit_columns");
-
-function careers_edit_columns($columns){
-  $columns = array(
-    "cb" => "<input  />",
-    "title" => "careers Title",
-    "description" => "Description",
-
-
-  );
-
-  return $columns;
-}
-function aboutUS_custom_columns($column){
-  global $post;
-  switch ($column) {
-    case "description":
-    echo $custom["text"][0];
-      break;
-
-  }
-
-}
-
-
-//careers end
-
-
-
 
 
 
@@ -1228,221 +699,6 @@ add_action('init', 'services_register');
 
 
 
-function services_register() {
-
-	$labels = array(
-		'name' => _x('Services', 'post type general name'),
-		'singular_name' => _x('services Item', 'post type singular name'),
-		'add_new' => _x('Add New', 'main item'),
-		'add_new_item' => __('Add New main Item'),
-		'edit_item' => __('Edit main Item'),
-		'new_item' => __('New main Item'),
-		'view_item' => __('View main Item'),
-		'search_items' => __('Search main'),
-		'not_found' =>  __('Nothing found'),
-		'not_found_in_trash' => __('Nothing found in Trash'),
-		'parent_item_colon' => ''
-	);
-
-	$args = array(
-		'labels' => $labels,
-		'public' => true,
-		'publicly_queryable' => true,
-		'show_ui' => true,
-		'query_var' => true,
-		'menu_icon' => get_stylesheet_directory_uri() . '/article16.png',
-		'rewrite' => true,
-		'capability_type' => 'post',
-		'hierarchical' => false,
-		'menu_position' => null,
-		'supports' => array('title')
-	  ); 
-
-	register_post_type( 'services' , $args );
-}	
-add_action("admin_init", "admin_init_services");
-
-function admin_init_services(){
-  add_meta_box("credits_meta_services", "services", "credits_meta_services", "services", "normal", "low");
-}
-
-
-function credits_meta_services() {
-  global $post;
-  $custom = get_post_custom($post->ID);
-
-  $service1 = $custom["service1"][0];
-  $service2 = $custom["service2"][0];
-  $service3 = $custom["service3"][0];
-  $service4 = $custom["service4"][0];
-  $service5 = $custom["service5"][0];
-  $service6 = $custom["service6"][0];
-
-
-  $service1_title = $custom["service1_title"][0];
-  $service2_title = $custom["service2_title"][0];
-  $service3_title = $custom["service3_title"][0];
-  $service4_title = $custom["service4_title"][0];
-  $service5_title = $custom["service5_title"][0];
-  $service6_title = $custom["service6_title"][0];
-
-  //arabic
-  $service1ar = $custom["service1ar"][0];
-  $service2ar = $custom["service2ar"][0];
-  $service3ar = $custom["service3ar"][0];
-  $service4ar = $custom["service4ar"][0];
-  $service5ar = $custom["service5ar"][0];
-  $service6ar = $custom["service6ar"][0];
-
-
-  $service1ar_title = $custom["service1ar_title"][0];
-  $service2ar_title = $custom["service2ar_title"][0];
-  $service3ar_title = $custom["service3ar_title"][0];
-  $service4ar_title = $custom["service4ar_title"][0];
-  $service5ar_title = $custom["service5ar_title"][0];
-  $service6ar_title = $custom["service6ar_title"][0];
-  //arabic end 
-
-?>
-
-<p><label>Service 1 title</label><br />
-<textarea name="service1_title" rows="1" cols="40"><?php echo $service1_title; ?></textarea></p>
-  <p><label>Service 1 text</label><br />
-  <textarea name="service1" rows="8" cols="50"><?php echo $service1; ?></textarea></p><br/>
-
-  <p><label>Service 2 title</label><br />
-  <textarea name="service2_title" rows="1" cols="40"><?php echo $service2_title; ?></textarea></p>
-  <p><label>Service 2 text</label><br />
-  <textarea type="service2" rows="8" cols="50" name="service2"><?php echo $service2; ?></textarea></p><br/>
-
-
-
-  <p><label>Service 3 title</label><br />
-  <textarea name="service3_title" rows="1" cols="40"><?php echo $service3_title; ?></textarea></p>
-  <p><label>Service 3 text</label><br />
-  <textarea type="service3" rows="8" cols="50" name="service3"><?php echo $service3; ?></textarea></p><br/>
-
-  <p><label>Service 4 title</label><br />
-  <textarea name="service4_title" rows="1" cols="40"><?php echo $service4_title; ?></textarea></p>
-  <p><label>Service 4 text</label><br />
-  <textarea type="service4" rows="8" cols="50" name="service4"><?php echo $service4; ?></textarea></p><br/>
-
-  <p><label>Service 5 title</label><br />
-  <textarea name="service5_title" rows="1" cols="40"><?php echo $service5_title; ?></textarea></p>
-  <p><label>Service 5 text</label><br />
-  <textarea type="service5" rows="8" cols="50" name="service5"><?php echo $service5; ?></textarea></p><br/>
-
-  <p><label>Service 6 title</label><br />
-  <textarea name="service6_title" rows="1" cols="40"><?php echo $service6_title; ?></textarea></p>
-  <p><label>Service 6 text</label><br />
-  <textarea type="service6" rows="8" cols="50" name="service6"><?php echo $service6; ?></textarea></p><br/>
-
-</br>
-<h1>Arabic</h1>
-</br>
-
-<p><label>Service 1 title</label><br />
-<textarea type="service1ar_title"   name="service1ar_title" rows="1" cols="40"><?php echo $service1ar_title;  ?></textarea></p>
-  <p><label>Service 1 text</label><br />
-  <textarea name="service1ar" rows="8" cols="50"><?php echo $service1ar; ?></textarea></p><br/>
-
-  <p><label>Service 2 title</label><br />
-  <textarea type="service2ar_title"   name="service2ar_title" rows="1" cols="40"><?php echo $service2ar_title;  ?></textarea></p>
-  <p><label>Service 2 text</label><br />
-  <textarea type="service2ar" rows="8" cols="50" name="service2ar"><?php echo $service2ar; ?></textarea></p><br/>
-
-
-
-  <p><label>Service 3 title</label><br />
-  <textarea type="service3ar_title"   name="service3ar_title" rows="1" cols="40"><?php echo $service3ar_title;  ?></textarea></p>
-  <p><label>Service 3 text</label><br />
-  <textarea type="service3ar" rows="8" cols="50" name="service3ar"><?php echo $service3ar; ?></textarea></p><br/>
-
-  <p><label>Service 4 title</label><br />
-  <textarea type="service4ar_title"   name="service4ar_title" rows="1" cols="40"><?php echo $service4ar_title;  ?></textarea></p>
-  <p><label>Service 4 text</label><br />
-  <textarea type="service4ar" rows="8" cols="50" name="service4ar"><?php echo $service4ar; ?></textarea></p><br/>
-
-  <p><label>Service 5 title</label><br />
-  <textarea type="service5ar_title"   name="service5ar_title" rows="1" cols="40"><?php echo $service5ar_title;  ?></textarea></p>
-  <p><label>Service 5 text</label><br />
-  <textarea type="service5ar" rows="8" cols="50" name="service5ar"><?php echo $service5ar; ?></textarea></p><br/>
-
-  <p><label>Service 6 title</label><br />
-  <textarea type="service6ar_title"   name="service6ar_title" rows="1" cols="40"><?php echo $service6ar_title;  ?></textarea></p>
-  <p><label>Service 6 text</label><br />
-  <textarea type="service6ar" rows="8" cols="50" name="service6ar"><?php echo $service6ar; ?></textarea></p><br/>
-
-
-
-
-  <?php
-}
-
-
-add_action('save_post', 'save_details_services','save_podcasts_meta','wo_save_postdata');
-function save_details_services(){
-	global $post;
-	  update_post_meta($post->ID, "service1", $_POST["service1"]);
-    update_post_meta($post->ID, "service2", $_POST["service2"]);
-    update_post_meta($post->ID, "service3", $_POST["service3"]);
-    update_post_meta($post->ID, "service4", $_POST["service4"]);
-    update_post_meta($post->ID, "service5", $_POST["service5"]);
-    update_post_meta($post->ID, "service6", $_POST["service6"]);
-    update_post_meta($post->ID, "service1_title", $_POST["service1_title"]);
-    update_post_meta($post->ID, "service2_title", $_POST["service2_title"]);
-    update_post_meta($post->ID, "service3_title", $_POST["service3_title"]);
-    update_post_meta($post->ID, "service4_title", $_POST["service4_title"]);
-    update_post_meta($post->ID, "service5_title", $_POST["service5_title"]);
-    update_post_meta($post->ID, "service6_title", $_POST["service6_title"]);
-    
-
-//arabic
-    update_post_meta($post->ID, "service1ar", $_POST["service1ar"]);
-    update_post_meta($post->ID, "service2ar", $_POST["service2ar"]);
-    update_post_meta($post->ID, "service3ar", $_POST["service3ar"]);
-    update_post_meta($post->ID, "service4ar", $_POST["service4ar"]);
-    update_post_meta($post->ID, "service5ar", $_POST["service5ar"]);
-    update_post_meta($post->ID, "service6ar", $_POST["service6ar"]);
-    update_post_meta($post->ID, "service1ar_title", $_POST["service1ar_title"]);
-    update_post_meta($post->ID, "service2ar_title", $_POST["service2ar_title"]);
-    update_post_meta($post->ID, "service3ar_title", $_POST["service3ar_title"]);
-    update_post_meta($post->ID, "service4ar_title", $_POST["service4ar_title"]);
-    update_post_meta($post->ID, "service5ar_title", $_POST["service5ar_title"]);
-    update_post_meta($post->ID, "service6ar_title", $_POST["service6ar_title"]);
-    
-
-
-    }
-
-
-    add_action("manage_posts_custom_column",  "services_custom_columns");
-    add_filter("manage_edit-services_columns", "services_edit_columns");
-
-function services_edit_columns($columns){
-  $columns = array(
-    "cb" => "<input  />",
-    "title" => "services Title",
-    "description" => "Description",
-
-
-  );
-
-  return $columns;
-}
-function services_custom_columns($column){
-  global $post;
-  switch ($column) {
-    case "description":
-    echo $custom["text"][0];
-      break;
-
-  }
-
-}
-
-
-//services end
 
 
 
@@ -1513,12 +769,7 @@ function credits_meta_contact() {
 <td>
 <input type = "text" name = "phone" id = "phone" size = "70" value = "<?php echo $phone; ?>" />
 </td> </tr> </table> 
-<p><label>Email</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "email" id = "email" size = "70" value = "<?php echo $email; ?>" />
-</td> </tr> </table> 
+
 <p><label>Address</label><br />
     <table>
 <tr valign = "top">
@@ -1609,7 +860,7 @@ add_action('init', 'home_register');
 function home_register() {
 
 	$labels = array(
-		'name' => _x('Home', 'post type general name'),
+		'name' => _x('Services', 'post type general name'),
 		'singular_name' => _x('Home Item', 'post type singular name'),
 		'add_new' => _x('Add New', 'main item'),
 		'add_new_item' => __('Add New main Item'),
@@ -1641,7 +892,7 @@ function home_register() {
 add_action("admin_init", "admin_init_home");
 
 function admin_init_home(){
-  add_meta_box("credits_meta_home", "home", "credits_meta_home", "home", "normal", "low");
+  add_meta_box("credits_meta_home", "Services", "credits_meta_home", "home", "normal", "low");
 }
 
 
@@ -1649,28 +900,7 @@ function credits_meta_home() {
   global $post;
   $custom = get_post_custom($post->ID);
 
-  $exp1 = $custom["exp1"][0];
-  $exp2 = $custom["exp2"][0];
-  $exp3 = $custom["exp3"][0];
-  $exp4 = $custom["exp4"][0];
-  $exp5 = $custom["exp5"][0];
-  $exp6 = $custom["exp6"][0];
 
-
-  $exp1img = $custom["exp1img"][0];
-  $exp2img = $custom["exp2img"][0];
-  $exp3img = $custom["exp3img"][0];
-  $exp4img = $custom["exp4img"][0];
-  $exp5img = $custom["exp5img"][0];
-  $exp6img = $custom["exp6img"][0];
-
-
-  $exp1dec = $custom["exp1dec"][0];
-  $exp2dec = $custom["exp2dec"][0];
-  $exp3dec = $custom["exp3dec"][0];
-  $exp4dec = $custom["exp4dec"][0];
-  $exp5dec = $custom["exp5dec"][0];
-  $exp6dec = $custom["exp6dec"][0];
 
 
 
@@ -1678,49 +908,20 @@ function credits_meta_home() {
   $brand2 = $custom["brand2"][0];
   $brand3 = $custom["brand3"][0];
   $brand4 = $custom["brand4"][0];
-  $brand5 = $custom["brand5"][0];
 
 
   $brand1ar = $custom["brand1ar"][0];
   $brand2ar = $custom["brand2ar"][0];
   $brand3ar = $custom["brand3ar"][0];
   $brand4ar = $custom["brand4ar"][0];
-  $brand5ar = $custom["brand5ar"][0];
 
 
   $brand1img = $custom["brand1img"][0];
   $brand2img = $custom["brand2img"][0];
   $brand3img = $custom["brand3img"][0];
   $brand4img = $custom["brand4img"][0];
-  $brand5img = $custom["brand5img"][0];
 
 
-
-  //arabic
-  $exp1ar = $custom["exp1ar"][0];
-  $exp2ar = $custom["exp2ar"][0];
-  $exp3ar = $custom["exp3ar"][0];
-  $exp4ar = $custom["exp4ar"][0];
-  $exp5ar = $custom["exp5ar"][0];
-  $exp6ar = $custom["exp6ar"][0];
-
-
-  $exp1decar = $custom["exp1decar"][0];
-  $exp2decar = $custom["exp2decar"][0];
-  $exp3decar = $custom["exp3decar"][0];
-  $exp4decar = $custom["exp4decar"][0];
-  $exp5decar = $custom["exp5decar"][0];
-  $exp6decar = $custom["exp6decar"][0];
-
-
-
-
-  $brand1ar = $custom["brand1ar"][0];
-  $brand2ar = $custom["brand2ar"][0];
-  $brand3ar = $custom["brand3ar"][0];
-  $brand4ar = $custom["brand4ar"][0];
-  $brand5ar = $custom["brand5ar"][0];
-  $brand6ar = $custom["brand6ar"][0];
 
 
 
@@ -1728,148 +929,13 @@ function credits_meta_home() {
 
 ?>
 
-<p><label>Experience 1 title</label><br />
-<textarea name="exp1" rows="1" cols="40"><?php echo $exp1; ?></textarea></p>
-  <p><label>Experience 1 text</label><br />
-  <textarea name="exp1dec" rows="8" cols="50"><?php echo $exp1dec; ?></textarea></p><br/>
 
-  <p><label>Experience 1 image</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "exp1img" id = "podcast_file" size = "70" value = "<?php echo $exp1img; ?>" />
-<input id = "upload_image_button1" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-<br/>
-
-
-  <p><label>Experience 2 title</label><br />
-<textarea name="exp2" rows="1" cols="40"><?php echo $exp2; ?></textarea></p>
-  <p><label>Experience 2 text</label><br />
-  <textarea name="exp2dec" rows="8" cols="50"><?php echo $exp2dec; ?></textarea></p><br/>
-
-  <p><label>Experience 2 image</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "exp2img" id = "podcast_file" size = "70" value = "<?php echo $exp2img; ?>" />
-<input id = "upload_image_button2" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-<br/>
-
-<p><label>Experience 3 title</label><br />
-<textarea name="exp3" rows="1" cols="40"><?php echo $exp3; ?></textarea></p>
-  <p><label>Experience 3 text</label><br />
-  <textarea name="exp3dec" rows="8" cols="50"><?php echo $exp3dec; ?></textarea></p><br/>
-
-  <p><label>Experience 3 image</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "exp3img" id = "podcast_file" size = "70" value = "<?php echo $exp3img; ?>" />
-<input id = "upload_image_button3" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-<br/>
-
-
-
-  <p><label>Experience 4 title</label><br />
-<textarea name="exp4" rows="1" cols="40"><?php echo $exp4; ?></textarea></p>
-  <p><label>Experience 4 text</label><br />
-  <textarea name="exp4dec" rows="8" cols="50"><?php echo $exp4dec; ?></textarea></p><br/>
-
-  <p><label>Experience 4 image</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "exp4img" id = "podcast_file" size = "70" value = "<?php echo $exp4img; ?>" />
-<input id = "upload_image_button4" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-<br/>
-
-
-  <p><label>Experience 5 title</label><br />
-<textarea name="exp5" rows="1" cols="40"><?php echo $exp5; ?></textarea></p>
-  <p><label>Experience 5 text</label><br />
-  <textarea name="exp5dec" rows="8" cols="50"><?php echo $exp5dec; ?></textarea></p><br/>
-
-  <p><label>Experience 5 image</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "exp5img" id = "podcast_file" size = "70" value = "<?php echo $exp5img; ?>" />
-<input id = "upload_image_button5" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-<br/>
-
-
-  <p><label>Experience 6 title</label><br />
-<textarea name="exp6" rows="1" cols="40"><?php echo $exp6; ?></textarea></p>
-  <p><label>Experience 6 text</label><br />
-  <textarea name="exp6dec" rows="8" cols="50"><?php echo $exp6dec; ?></textarea></p><br/>
-
-  <p><label>Experience 6 image</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "exp6img" id = "podcast_file" size = "70" value = "<?php echo $exp6img; ?>" />
-<input id = "upload_image_button6" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-<br/>
-
-
-
-</br>
-<h1>Arabic</h1>
-</br>
-<p><label>Experience 1 title</label><br />
-<textarea name="exp1ar" rows="1" cols="40"><?php echo $exp1ar; ?></textarea></p>
-  <p><label>Experience 1 text</label><br />
-  <textarea name="exp1decar" rows="8" cols="50"><?php echo $exp1decar; ?></textarea></p><br/>
-
-  <p><label>Experience 2 title</label><br />
-<textarea name="exp2ar" rows="1" cols="40"><?php echo $exp2ar; ?></textarea></p>
-  <p><label>Experience 2 text</label><br />
-  <textarea name="exp2decar" rows="8" cols="50"><?php echo $exp2decar; ?></textarea></p><br/>
-
-
-
-<p><label>Experience 3 title</label><br />
-<textarea name="exp3ar" rows="1" cols="40"><?php echo $exp3ar; ?></textarea></p>
-  <p><label>Experience 3 text</label><br />
-  <textarea name="exp3decar" rows="8" cols="50"><?php echo $exp3decar; ?></textarea></p><br/>
-
-  <p><label>Experience 4 title</label><br />
-<textarea name="exp4ar" rows="1" cols="40"><?php echo $exp4ar; ?></textarea></p>
-  <p><label>Experience 4 text</label><br />
-  <textarea name="exp4decar" rows="8" cols="50"><?php echo $exp4decar; ?></textarea></p><br/>
-
-  <p><label>Experience 5 title</label><br />
-<textarea name="exp5ar" rows="1" cols="40"><?php echo $exp5ar; ?></textarea></p>
-  <p><label>Experience 5 text</label><br />
-  <textarea name="exp5decar" rows="8" cols="50"><?php echo $exp5decar; ?></textarea></p><br/>
-
-
-  <p><label>Experience 6 title</label><br />
-<textarea name="exp6ar" rows="1" cols="40"><?php echo $exp6ar; ?></textarea></p>
-  <p><label>Experience 6 text</label><br />
-  <textarea name="exp6decar" rows="8" cols="50"><?php echo $exp6decar; ?></textarea></p><br/>
-
-</br>
-
-
-<h1>Brands</h1>
-<p><label>Brand 1 title</label><br />
+<h1>Services</h1>
+<p><label>Service 1 title</label><br />
 <textarea name="brand1" rows="1" cols="40"><?php echo $brand1; ?></textarea></p>
-<p><label>Brand 1 title Arabic</label><br />
+<p><label>Service1 title Arabic</label><br />
 <textarea name="brand1ar" rows="1" cols="40"><?php echo $brand1ar; ?></textarea></p>
-  <p><label>Brand 1 image</label><br />
+  <p><label>Service 1 image</label><br />
     <table>
 <tr valign = "top">
 <td>
@@ -1880,11 +946,11 @@ function credits_meta_home() {
 <br/>
 
 
-  <p><label>Brand 2 title</label><br />
+  <p><label>Service 2 title</label><br />
 <textarea name="brand2" rows="1" cols="40"><?php echo $brand2; ?></textarea></p>
-<p><label>Brand 2 title Arabic</label><br />
+<p><label>Service 2 title Arabic</label><br />
 <textarea name="brand2ar" rows="1" cols="40"><?php echo $brand2ar; ?></textarea></p>
-  <p><label>Brand 2 image</label><br />
+  <p><label>Service 2 image</label><br />
     <table>
 <tr valign = "top">
 <td>
@@ -1894,11 +960,11 @@ function credits_meta_home() {
 <input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
 <br/>
 
-<p><label>Brand 3 title</label><br />
+<p><label>Service 3 title</label><br />
 <textarea name="brand3" rows="1" cols="40"><?php echo $brand3; ?></textarea></p>
-<p><label>Brand 3 title Arabic</label><br />
+<p><label>Service 3 title Arabic</label><br />
 <textarea name="brand3ar" rows="1" cols="40"><?php echo $brand3ar; ?></textarea></p>
-  <p><label>Brand 3 image</label><br />
+  <p><label>Service 3 image</label><br />
     <table>
 <tr valign = "top">
 <td>
@@ -1910,11 +976,11 @@ function credits_meta_home() {
 
 
 
-  <p><label>Brand 4 title</label><br />
+  <p><label>Service 4 title</label><br />
 <textarea name="brand4" rows="1" cols="40"><?php echo $brand4; ?></textarea></p>
-<p><label>Brand 4 title Arabic</label><br />
+<p><label>Service 4 title Arabic</label><br />
 <textarea name="brand4ar" rows="1" cols="40"><?php echo $brand4ar; ?></textarea></p>
-  <p><label>Brand 4 image</label><br />
+  <p><label>Service 4 image</label><br />
     <table>
 <tr valign = "top">
 <td>
@@ -1925,29 +991,9 @@ function credits_meta_home() {
 <br/>
 
 
-  <p><label>Brand 5 title</label><br />
-<textarea name="brand5" rows="1" cols="40"><?php echo $brand5; ?></textarea></p>
-<p><label>Brand 5 title Arabic</label><br />
-<textarea name="brand5ar" rows="1" cols="40"><?php echo $bran5ar; ?></textarea></p>
-  <p><label>Brand 5 image</label><br />
-    <table>
-<tr valign = "top">
-<td>
-<input type = "text" name = "brand5img" id = "podcast_file" size = "70" value = "<?php echo $brand5img; ?>" />
-<input id = "brand_upload_image_button5" type = "button" value = "Upload">
-</td> </tr> </table> 
-<input type = "hidden" name = "img_txt_id" id = "img_txt_id" value = "" />
-<br/>
 
 
 <script type = "text/javascript">
-
-jQuery("#upload_image_button1").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
-jQuery("#upload_image_button2").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
-jQuery("#upload_image_button3").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
-jQuery("#upload_image_button4").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
-jQuery("#upload_image_button5").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
-jQuery("#upload_image_button6").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
 
 
 
@@ -1956,7 +1002,6 @@ jQuery("#brand_upload_image_button1").on("click",function(t){var e;t.preventDefa
 jQuery("#brand_upload_image_button2").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
 jQuery("#brand_upload_image_button3").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
 jQuery("#brand_upload_image_button4").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
-jQuery("#brand_upload_image_button5").on("click",function(t){var e;t.preventDefault();var o=jQuery(this);console.log(o),e?e.open():(console.log("1",o),e=wp.media.frames.file_frame=wp.media({title:jQuery(this).data("uploader_title"),button:{text:jQuery(this).data("uploader_button_text")},multiple:!1}),console.log("2",o),e.on("select",function(){attachment=e.state().get("selection").first().toJSON();var t=attachment.url,a=o.prev()[0];console.log("3",o),a.value=t}),e.open())});
 
 </script>
 
@@ -1966,19 +1011,7 @@ jQuery("#brand_upload_image_button5").on("click",function(t){var e;t.preventDefa
 add_action('save_post', 'save_details_home','save_podcasts_meta','wo_save_postdata');
 function save_details_home(){
 	global $post;
-	  update_post_meta($post->ID, "exp1", $_POST["exp1"]);
-    update_post_meta($post->ID, "exp2", $_POST["exp2"]);
-    update_post_meta($post->ID, "exp3", $_POST["exp3"]);
-    update_post_meta($post->ID, "exp4", $_POST["exp4"]);
-    update_post_meta($post->ID, "exp5", $_POST["exp5"]);
-    update_post_meta($post->ID, "exp6", $_POST["exp6"]);
 
-	  update_post_meta($post->ID, "exp1img", $_POST["exp1img"]);
-    update_post_meta($post->ID, "exp2img", $_POST["exp2img"]);
-    update_post_meta($post->ID, "exp3img", $_POST["exp3img"]);
-    update_post_meta($post->ID, "exp4img", $_POST["exp4img"]);
-    update_post_meta($post->ID, "exp5img", $_POST["exp5img"]);
-    update_post_meta($post->ID, "exp6img", $_POST["exp6img"]);
 
     update_post_meta($post->ID, "brand1", $_POST["brand1"]);
     update_post_meta($post->ID, "brand2", $_POST["brand2"]);
@@ -2002,27 +1035,7 @@ function save_details_home(){
     update_post_meta($post->ID, "brand6img", $_POST["brand6img"]);
 
 
-    update_post_meta($post->ID, "exp1dec", $_POST["exp1dec"]);
-    update_post_meta($post->ID, "exp2dec", $_POST["exp2dec"]);
-    update_post_meta($post->ID, "exp3dec", $_POST["exp3dec"]);
-    update_post_meta($post->ID, "exp4dec", $_POST["exp4dec"]);
-    update_post_meta($post->ID, "exp5dec", $_POST["exp5dec"]);
-    update_post_meta($post->ID, "exp6dec", $_POST["exp6dec"]);
-    
-
-//arabic
-update_post_meta($post->ID, "exp1ar", $_POST["exp1ar"]);
-update_post_meta($post->ID, "exp2ar", $_POST["exp2ar"]);
-update_post_meta($post->ID, "exp3ar", $_POST["exp3ar"]);
-update_post_meta($post->ID, "exp4ar", $_POST["exp4ar"]);
-update_post_meta($post->ID, "exp5ar", $_POST["exp5ar"]);
-update_post_meta($post->ID, "exp6ar", $_POST["exp6ar"]);
-update_post_meta($post->ID, "exp1decar", $_POST["exp1decar"]);
-update_post_meta($post->ID, "exp2decar", $_POST["exp2decar"]);
-update_post_meta($post->ID, "exp3decar", $_POST["exp3decar"]);
-update_post_meta($post->ID, "exp4decar", $_POST["exp4decar"]);
-update_post_meta($post->ID, "exp5decar", $_POST["exp5decar"]);
-update_post_meta($post->ID, "exp6decar", $_POST["exp6decar"]);
+  
     
 
 
@@ -2035,7 +1048,7 @@ update_post_meta($post->ID, "exp6decar", $_POST["exp6decar"]);
 function home_edit_columns($columns){
   $columns = array(
     "cb" => "<input  />",
-    "title" => "home Title",
+    "title" => "Services",
     "description" => "Description",
 
 
