@@ -145,7 +145,7 @@ wp_reset_postdata();
 		<div class="row">
 			<div class="col-md-12">
 				<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/img/delivery.png"></div>
-				<a class="delivery-btn" href="#">Click here for delivery</a>
+				<a class="delivery-btn" href="http://orderalmayass.com" target="_blank">Click here for delivery</a>
 			</div>
 		</div>
 </div>
@@ -169,8 +169,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				<div>cdskjvndvnd's</div>
 			</div>
 			<div class="col-md-12 social">
-				<a class="web"><i class="fa fa-globe"></i></a>
-				<a class="insta"><i class="fab fa-instagram"></i></a>
+				<a class="insta" href="https://www.instagram.com/almayasskw/" target="_blank"><i class="fab fa-instagram"></i></a>
 			</div>
 			<div class="col-md-12 map">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.0054147005226!2d47.93899681509871!3d29.340837082143736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf854a7782564b%3A0x145d6a0bdb21fb30!2zRGlldCBDZW50ZXIgfCDYr9in2YrYqiDYs9mG2KrYsQ!5e0!3m2!1sen!2seg!4v1609680259521!5m2!1sen!2seg" width="80%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                           

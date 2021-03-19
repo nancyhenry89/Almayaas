@@ -31,4 +31,16 @@ $(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
    return false;
   });
+  var isMobile = window.matchMedia("only screen and (max-width: 767px)").matches;
+
+  $('.header-nav li a').click(function(){
+    event.preventDefault();
+    var div=$(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(div).offset().top
+  }, 1000);
+  if(isMobile){
+    $('.header-nav').slideUp();
+  }
+  });
 })

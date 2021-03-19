@@ -17,7 +17,7 @@
 #story h2 {
     color: #b18e2e;
 }
-.story-text{column-count:2}
+.story-text{column-count:2;}
 
 .lang-switch {font-family: 'Cairo', sans-serif;background: #b18e2e;float: right;width: 40px;height: 36px;color: #fff;font-size: 25px;text-align: center;line-height: 26px;position: absolute;right:20px}
 
@@ -53,7 +53,7 @@ i.fab.fa-instagram {
 header {
     padding: 15px 0;
     position: relative;
-    z-index: 9;
+    z-index: 9999;
     background: #f3eee6ab;
 }
 
@@ -83,7 +83,10 @@ ul.slick-dots li {
 }
 
 button#slick-slide-control00 {}
-
+a.delivery-btn:hover {
+    text-decoration: none;
+    background: #7e8386;
+}
 ul.slick-dots li.slick-active button {
     border: 0;
     background: #fff;
@@ -197,9 +200,8 @@ a.arrow-up {
 #story h2 {
     color: #b18e2e;
 }
-.story-text{column-count:2}
+.story-text{column-count:2;margin-bottom: 50px;line-height: 24px;font-size: 15px;text-align: justify;column-gap: 39px;}
 
-.lang-switch {font-family: 'Cairo', sans-serif;background: #b18e2e;float: right;width: 40px;height: 36px;color: #fff;font-size: 25px;text-align: center;line-height: 26px;position: absolute;right:20px}
 
 .lang-switch:after {content: "";display: block;width: 40px;height: 5px;position: absolute;background: #b18e2e;}
 .lang-switch a{color:#fff}
@@ -213,35 +215,20 @@ a.arrow-up {
     position: relative;
 }
 
-.header-nav ul {
-    padding: 0;
-    display: flex;
-    width: 65%;
-    margin: auto;
-    padding: 20px 0;
-}
+
 
 .logo {
     position: absolute;
     padding-left: 15px;
+    left: 80px;
 }
 
 i.fab.fa-instagram {
     /* display: none; */
 }
 
-header {
-    padding: 15px 0;
-    position: relative;
-    z-index: 9;
-    background: #f3eee6ab;
-}
 
-.header-nav li a {
-    color: #7d8285;
-    font-weight: bold;
-    font-size: 16px;
-}
+
 ul.slick-dots {
     position: absolute;
     bottom: 10px;
@@ -375,9 +362,15 @@ label.service-label {
 #services h2 {
     color: #7e8386;
 }
-
+p.about-text {
+    margin-bottom: 50px;
+    line-height: 24px;
+    font-size: 15px;
+    text-align: justify;
+}
 div#services {
     padding: 30px 0;
+    margin-bottom: 50px;
 }
 
 h3.gal-title {
@@ -415,6 +408,7 @@ a.delivery-btn {
     margin-left: -121px;
     margin-top: 40px;
     display: inline-block;
+    transition: all .7s ease;
 }
 #contact h2 {
     color: #b18c2d;
@@ -459,9 +453,23 @@ div#contact {
 
 
 @media only screen and (max-width: 768px) {
+    .gal {
+    width: 100%;
+}
+
+
+
+div#slideshow {
+    height: 250px;
+    margin-top: 6px;
+}
+
+iframe {
+    width: 100%;
+}
 
 .mobile-nav {
-    color: #013c77;
+    color: #b18d2d;
     float: right;
     font-size: 28px;
     margin-left: 20px;
@@ -471,7 +479,7 @@ div#contact {
     padding: 0 10px;
     position: fixed;
     top: 0px;
-    right: -5px;
+    right: -15px;
     z-index: 99;
     font-size: 25px;
 }
@@ -479,16 +487,16 @@ div#contact {
 .header-nav {
     position: fixed;
     z-index: 99;
-    background: #fffffff5;
+    background: #b18d2d;
     width: 100%;
     right: 0;
-    top: 40px;
+    top: 36px;
     display: none;
 }
 
 .header-nav li {
     width: 100%;
-    height: 90px;
+    height: 70px;
     display: inline-block;
     border-bottom: 1px solid #dadada;
 }
@@ -497,5 +505,42 @@ div#contact {
     display: block;
     float: left;
     width: 100%;
+    padding: 0;
+}
+header{background:transparent}
+.lang-switch{
+    right: 56px;
+    top: 0;
+}
+p.story-text {
+    column-count: 1;
+    column-gap: 0;
+    /* width: 90%; */
+    /* margin-left: 5%; */
+}
+
+#story .col-md-12 {
+    /* padding-right: 0; */
+}
+
+div#story>.row {
+    margin: 0;
+}
+
+ul.slick-dots {
+    margin-left: -50px;
+}
+
+div#gallery {
+    padding-top: 0;
+}
+
+.col-md-12.map {
+    padding: 0;
+}
+
+.header-nav li a {
+    color: #fff;
+    line-height: 70px;
 }
 }
