@@ -690,10 +690,6 @@ function story_custom_columns($column){
 
 
 
-
-//services section
-add_action('init', 'services_register');
-
 //Add Metabox
 
 

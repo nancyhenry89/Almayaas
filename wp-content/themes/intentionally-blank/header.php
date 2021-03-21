@@ -31,7 +31,7 @@
 			<!-- header -->
 			<header class="header clear" role="banner">
 			<div class="mobile-nav"><i class="fas fa-bars"></i></div>
-			<div class="lang-switch"><a href="<?php echo home_url(); ?>/story-ar">ع</a></div>
+			<div class="lang-switch"><a href="<?php echo home_url(); ?>/home-ar">ع</a></div>
 
 
 					<div class="header-nav">

@@ -20,6 +20,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
         <link id="mainStyle" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles-ar.css" >
         <link id="slick" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/slick.css" >
 		<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -37,26 +39,24 @@
 			<!-- header -->
 			<header class="header clear" role="banner">
 			<div class="mobile-nav"><i class="fas fa-bars"></i></div>
-
 			<div class="lang-switch"><a href="<?php echo home_url(); ?>">E</a></div>
-			<a class="insta" href="https://www.instagram.com/samacateringco/" target="_blank"><i class="fab fa-instagram"></i></a>
+
 
 					<div class="header-nav">
-					<ul>				
-							<li><a href="<?php echo home_url(); ?>/about-ar">عن سما</a></li>
-							<li><a href="<?php echo home_url(); ?>/ar-services">خدماتنا</a></li>
-							<li>
-								<!-- logo -->
-							<div class="logo">
-								<a href="<?php echo home_url(); ?>/story-ar">
-									<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+					<!-- logo -->
+						<div class="logo">
+								<a href="<?php echo home_url(); ?>">
 									<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
 								</a>
 							</div>
 					<!-- /logo -->
-							</li>
-							<li><a href="<?php echo home_url(); ?>/ar-brands">العلامات التجارية</a></li>
-							<li><a href="<?php echo home_url(); ?>/contact-us-ar">اتصل بنا</a></li>
+					<ul>				
+							<li><a href="#story">قصتنا</a></li>
+							<li><a href="#about">عنا </a></li>
+							<li><a href="#services">خدماتنا</a></li>
+							<li><a href="#gallery">مكتبه الصور</a></li>
+							<li><a href="#delivery">التوصيل</a></li>
+							<li><a href="#contact">اتصل بنا</a></li>
 							
 					</div>
 					<!-- nav -->
@@ -67,7 +67,6 @@
 						</ul>
 
 					</div>
-
 					<!--<nav class="nav" role="navigation">
 						<?php //html5blank_nav(); ?>
 					</nav>-->

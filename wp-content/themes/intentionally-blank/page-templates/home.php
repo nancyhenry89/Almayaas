@@ -162,11 +162,11 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			</div>
 			<div class="col-md-12 phone">
 				<label>Phone Number</label>
-				<div class="number">022243432432</div>
+				<div class="number"><?php echo get_post_meta( get_the_ID(), 'phone', true ); ?> </div>
 			</div>
 			<div class="col-md-12 address">
 				<label>Address</label>
-				<div>cdskjvndvnd's</div>
+				<div><?php echo get_post_meta( get_the_ID(), 'add', true ); ?> </div>
 			</div>
 			<div class="col-md-12 social">
 				<a class="insta" href="https://www.instagram.com/almayasskw/" target="_blank"><i class="fab fa-instagram"></i></a>

@@ -1,4 +1,4 @@
-<?php /* Template Name: Home Template */ get_header(); ?>
+<?php /* Template Name: Home-ar Template */ get_header('arabic'); ?>
 
     <div id="main-content" class="main-content">
 
@@ -45,13 +45,13 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 <div class="container" id="story">
 	<div class="row">
 		<div class="col-md-12 center">
-			<h2>Our Story</h2>
+			<h2>قصتنا</h2>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<p class="story-text">
-			<?php echo get_post_meta( get_the_ID(), 'story_text_box', true ); ?>
+			<?php echo get_post_meta( get_the_ID(), 'story_text_box_ar', true ); ?>
 			</p>
 		</div>
 	</div>
@@ -61,13 +61,13 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	<div class="container" >
 		<div class="row">
 			<div class="col-md-12 center">
-				<h2>About us</h2>
+				<h2>عنا</h2>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12">
 				<p class="about-text">
-				<?php echo get_post_meta( get_the_ID(), 'about_text_box', true ); ?>
+				<?php echo get_post_meta( get_the_ID(), 'about_text_box_ar', true ); ?>
 				</p>
 			</div>
 		</div>
@@ -87,7 +87,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	<div class="container" >
 		<div class="row">
 			<div class="col-md-12 center">
-				<h2>Services</h2>
+				<h2>خدماتنا</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -95,25 +95,25 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				<div class="s-icon">
 				<img src="<?php echo get_post_meta( get_the_ID(), 'brand1img', true ); ?>">
 				</div>
-				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand1', true ); ?> </label>
+				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand1ar', true ); ?> </label>
 			</div>
 			<div class="col-md-3">
 				<div class="s-icon">
 				<img src="<?php echo get_post_meta( get_the_ID(), 'brand2img', true ); ?>">
 				</div>
-				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand2', true ); ?> </label>
+				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand2ar', true ); ?> </label>
 			</div>
 			<div class="col-md-3">
 				<div class="s-icon">
 				<img src="<?php echo get_post_meta( get_the_ID(), 'brand3img', true ); ?>">
 				</div>
-				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand3', true ); ?> </label>
+				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand3ar', true ); ?> </label>
 			</div>
 			<div class="col-md-3">
 				<div class="s-icon">
 				<img src="<?php echo get_post_meta( get_the_ID(), 'brand4img', true ); ?>">
 				</div>
-				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand4', true ); ?> </label>
+				<label class="service-label"><?php echo get_post_meta( get_the_ID(), 'brand4ar', true ); ?> </label>
 			</div>
 		</div>
 	</div>
@@ -127,15 +127,15 @@ wp_reset_postdata();
 <div id="gallery" class="container-fluid">
 
 	<div id="food-gallery" class="gal">
-		<h3 class="gal-title">Food</h3>
+		<h3 class="gal-title">الطعام</h3>
 		<div class="gal-cont"><?php if( function_exists('photo_gallery') ) { photo_gallery(1); } ?></div>
 	</div>
 	<div id="interior" class="gal">
-		<h3 class="gal-title">Interior</h3>
+		<h3 class="gal-title">الداخل</h3>
 		<div class="gal-cont"><?php if( function_exists('photo_gallery') ) { photo_gallery(2); } ?></div>
 	</div>
 	<div id="exterior" class="gal">
-	<h3 class="gal-title">Exterior</h3>
+	<h3 class="gal-title">الخارج</h3>
 	<div class="gal-cont"><?php if( function_exists('photo_gallery') ) { photo_gallery(3); } ?></div>
 	</div>
 
@@ -145,7 +145,7 @@ wp_reset_postdata();
 		<div class="row">
 			<div class="col-md-12">
 				<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/img/delivery.png"></div>
-				<a class="delivery-btn" href="#">Click here for delivery</a>
+				<a class="delivery-btn" href="http://orderalmayass.com" target="_blank">اضغط هنا للتوصيل</a>
 			</div>
 		</div>
 </div>
@@ -158,19 +158,18 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 <div class="container" >
 		<div class="row">
 		<div class="col-md-12 center">
-				<h2>Contact us</h2>
+				<h2>اتصل بنا</h2>
 			</div>
 			<div class="col-md-12 phone">
-				<label>Phone Number</label>
-				<div class="number">022243432432</div>
+				<label>التليفون</label>
+				<div class="number"><?php echo get_post_meta( get_the_ID(), 'phone', true ); ?> </div>
 			</div>
 			<div class="col-md-12 address">
-				<label>Address</label>
-				<div>cdskjvndvnd's</div>
+				<label>العنوان</label>
+				<div><?php echo get_post_meta( get_the_ID(), 'addar', true ); ?> </div>
 			</div>
 			<div class="col-md-12 social">
-				<a class="web"><i class="fa fa-globe"></i></a>
-				<a class="insta"><i class="fab fa-instagram"></i></a>
+				<a class="insta" href="https://www.instagram.com/almayasskw/" target="_blank"><i class="fab fa-instagram"></i></a>
 			</div>
 			<div class="col-md-12 map">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.0054147005226!2d47.93899681509871!3d29.340837082143736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf854a7782564b%3A0x145d6a0bdb21fb30!2zRGlldCBDZW50ZXIgfCDYr9in2YrYqiDYs9mG2KrYsQ!5e0!3m2!1sen!2seg!4v1609680259521!5m2!1sen!2seg" width="80%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                           
@@ -205,4 +204,4 @@ wp_reset_postdata();
 
 
 <?php
-get_footer();
+get_footer('ar');
